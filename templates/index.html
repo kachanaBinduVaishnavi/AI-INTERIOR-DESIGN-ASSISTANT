@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Interior Design Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🏠 AI Interior Design Assistant</h1>
+
+        <p class="subtitle">
+            Upload your room image and get AI-powered interior design suggestions.
+        </p>
+
+        <form action="/analyze"
+              method="POST"
+              enctype="multipart/form-data">
+
+            <div class="form-group">
+
+                <label for="room_image">
+                    📷 Upload Room Image
+                </label>
+
+                <input
+                    type="file"
+                    id="room_image"
+                    name="room_image"
+                    accept="image/*"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="room_type">
+                    🏠 Room Type
+                </label>
+
+                <select id="room_type"
+                        name="room_type"
+                        required>
+
+                    <option value="">
+                        Select room type
+                    </option>
+
+                    <option value="Bedroom">
+                        Bedroom
+                    </option>
+
+                    <option value="Living Room">
+                        Living Room
+                    </option>
+
+                    <option value="Kitchen">
+                        Kitchen
+                    </option>
+
+                    <option value="Dining Room">
+                        Dining Room
+                    </option>
+
+                    <option value="Home Office">
+                        Home Office
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="style">
+                    🎨 Interior Style
+                </label>
+
+                <select id="style"
+                        name="style"
+                        required>
+
+                    <option value="">
+                        Select design style
+                    </option>
+
+                    <option value="Modern">
+                        Modern
+                    </option>
+
+                    <option value="Minimal">
+                        Minimal
+                    </option>
+
+                    <option value="Traditional">
+                        Traditional
+                    </option>
+
+                    <option value="Luxury">
+                        Luxury
+                    </option>
+
+                    <option value="Bohemian">
+                        Bohemian
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="budget">
+                    💰 Budget
+                </label>
+
+                <select id="budget"
+                        name="budget"
+                        required>
+
+                    <option value="">
+                        Select your budget
+                    </option>
+
+                    <option value="50000">
+                        Below ₹50,000
+                    </option>
+
+                    <option value="100000">
+                        ₹50,000 - ₹1,00,000
+                    </option>
+
+                    <option value="200000">
+                        ₹1,00,000 - ₹2,00,000
+                    </option>
+
+                    <option value="500000">
+                        Above ₹2,00,000
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button type="submit">
+                ✨ Analyze My Room
+            </button>
+
+        </form>
+
+        <a href="/history" style="text-decoration: none;">
+            <button type="button">
+                📚 View Design History
+            </button>
+        </a>
+
+
+
+    </div>
+
+</body>
+
+</html>

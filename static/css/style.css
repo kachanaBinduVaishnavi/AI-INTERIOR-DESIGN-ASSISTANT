@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+  }
+
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+background: #f4f1ec;
+color: #333;
+}
+
+.container {
+width: 90%;
+max-width: 850px;
+margin: 40px auto;
+background: white;
+padding: 40px;
+border-radius: 18px;
+box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+text-align: center;
+margin-bottom: 10px;
+}
+
+h2 {
+margin-bottom: 18px;
+}
+
+.subtitle {
+text-align: center;
+color: #666;
+margin-bottom: 35px;
+}
+
+/* =========================
+FORM STYLING
+========================= */
+
+.form-group {
+margin-bottom: 25px;
+}
+
+label {
+display: block;
+font-weight: bold;
+margin-bottom: 8px;
+}
+
+input,
+select {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 8px;
+font-size: 15px;
+background: white;
+}
+
+input:focus,
+select:focus {
+outline: none;
+border-color: #777;
+}
+
+/* =========================
+BUTTONS
+========================= */
+
+button {
+width: 100%;
+padding: 14px;
+border: none;
+border-radius: 8px;
+background: #333;
+color: white;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+margin-top: 10px;
+}
+
+button:hover {
+background: #555;
+}
+
+a {
+text-decoration: none;
+}
+
+a button {
+margin-top: 5px;
+}
+
+/* =========================
+RESULT SECTIONS
+========================= */
+
+.result-section {
+margin-bottom: 30px;
+padding: 25px;
+border: 1px solid #e2ded8;
+border-radius: 14px;
+background: #faf9f7;
+}
+
+/* =========================
+ROOM IMAGE
+========================= */
+
+.room-image {
+width: 100%;
+max-height: 500px;
+object-fit: cover;
+border-radius: 12px;
+display: block;
+}
+
+/* =========================
+ROOM DETAILS
+========================= */
+
+.details p {
+padding: 12px;
+margin: 8px 0;
+background: white;
+border-radius: 8px;
+}
+
+/* =========================
+AI RESULT
+========================= */
+
+.ai-result {
+background: white;
+padding: 20px;
+border-radius: 10px;
+line-height: 1.7;
+white-space: pre-line;
+overflow-wrap: break-word;
+}
+
+/* =========================
+HISTORY PAGE
+========================= */
+
+.history-card {
+margin-bottom: 25px;
+padding: 25px;
+border: 1px solid #e2ded8;
+border-radius: 14px;
+background: #faf9f7;
+}
+
+.history-header h2 {
+margin-top: 0;
+margin-bottom: 15px;
+}
+
+.history-details {
+background: white;
+padding: 15px;
+border-radius: 10px;
+margin-bottom: 15px;
+}
+
+.history-details p {
+margin: 8px 0;
+}
+
+/* =========================
+EXPANDABLE AI ANALYSIS
+========================= */
+
+details {
+background: white;
+border-radius: 10px;
+padding: 15px;
+}
+
+summary {
+cursor: pointer;
+font-weight: bold;
+padding: 5px;
+}
+
+summary:hover {
+color: #555;
+}
+
+details .ai-result {
+margin-top: 15px;
+}
+
+/* =========================
+PRINT / SAVE AS PDF
+========================= */
+
+.print-section {
+text-align: center;
+}
+
+@media print {
+
+body {
+    background: white;
+}
+
+.container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 20px;
+    box-shadow: none;
+}
+
+button,
+a {
+    display: none;
+}
+
+.print-section {
+    display: none;
+}
+
+.result-section {
+    break-inside: avoid;
+}
+
+.room-image {
+    max-height: 450px;
+}
+
+}
+
+/* =========================
+MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 600px) {
+
+.container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.result-section {
+    padding: 18px;
+}
+
+.history-card {
+    padding: 18px;
+}
+
+.ai-result {
+    padding: 15px;
+    font-size: 14px;
+}
+
+button {
+    font-size: 15px;
+}
+
+}

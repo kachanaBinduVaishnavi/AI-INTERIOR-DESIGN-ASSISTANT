@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Interior Design Result</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🏠 AI Interior Design Report</h1>
+
+<p class="subtitle">
+    Your personalized AI-powered interior design analysis
+</p>
+
+
+
+<div class="result-section">
+
+    <h2>📷 Your Room</h2>
+
+    <img
+        src="{{ url_for('static', filename='uploads/' + image_filename) }}"
+        alt="Uploaded Room"
+        class="room-image"
+    >
+
+</div>
+
+
+
+
+<div class="result-section">
+
+    <h2>📋 Room Details</h2>
+
+    <div class="details">
+
+        <p>
+            <strong>🏠 Room Type:</strong>
+            {{ room_type }}
+        </p>
+
+        <p>
+            <strong>🎨 Interior Style:</strong>
+            {{ style }}
+        </p>
+
+        <p>
+            <strong>💰 Budget:</strong>
+            ₹{{ budget }}
+        </p>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="result-section">
+
+    <h2>🤖 AI Design Analysis</h2>
+
+    <div class="ai-result">
+
+        {{ ai_result | replace('\n', '<br>') | safe }}
+
+    </div>
+
+</div>
+
+
+
+
+<div class="result-section print-section">
+
+    <h2>🖨️ Save Your Report</h2>
+
+    <p>
+        You can print this report or save it as a PDF for future reference.
+    </p>
+
+    <button
+        type="button"
+        onclick="window.print()">
+        🖨️ Print / Save as PDF
+    </button>
+
+</div>
+
+
+
+<a href="/" style="text-decoration: none;">
+
+    <button type="button">
+        🔄 Analyze Another Room
+    </button>
+
+</a>
+
+
+<a href="/history" style="text-decoration: none;">
+
+    <button type="button">
+        📚 View Design History
+    </button>
+
+</a>
+
+
+</div>
+
+</body>
+
+</html>

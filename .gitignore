@@ -1,0 +1,20 @@
+# Secrets
+.env
+.env.*
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+image_gen_env/
+.venv/
+
+# Local database
+*.db
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store

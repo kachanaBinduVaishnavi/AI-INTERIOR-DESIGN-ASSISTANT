@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Design History</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📚 Design History</h1>
+
+<p class="subtitle">
+    View your previous AI interior design analyses.
+</p>
+
+
+{% if designs %}
+
+    {% for design in designs %}
+
+    <div class="history-card">
+
+        <div class="history-header">
+
+            <h2>
+                🏠 {{ design[2] }} - {{ design[3] }}
+            </h2>
+
+        </div>
+
+
+        <div class="history-details">
+
+            <p>
+                <strong>💰 Budget:</strong>
+                ₹{{ design[4] }}
+            </p>
+
+            <p>
+                <strong>📅 Date:</strong>
+                {{ design[6] }}
+            </p>
+
+        </div>
+
+
+        <details>
+
+            <summary>
+                🤖 View AI Analysis
+            </summary>
+
+            <div class="ai-result">
+
+                {{ design[5] | replace('\n', '<br>') | safe }}
+
+            </div>
+
+        </details>
+
+    </div>
+
+    {% endfor %}
+
+{% else %}
+
+    <div class="result-section">
+
+        <h2>No Design History Yet</h2>
+
+        <p>
+            Analyze a room to create your first design history record.
+        </p>
+
+    </div>
+
+{% endif %}
+
+
+<a href="/" style="text-decoration: none;">
+
+    <button type="button">
+        🏠 Back to Home
+    </button>
+
+</a>
+
+
+</div>
+
+</body>
+
+</html>
